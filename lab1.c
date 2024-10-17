@@ -26,7 +26,7 @@ int main() {
                 break;
             case 2:
                 deleted_item = pop(&top, stack);
-                if (deleted_item != -1)  // Check if pop was successful
+                if (deleted_item != -1) 
                     printf("Deleted item = %d\n", deleted_item);
 
                 break;
@@ -39,13 +39,13 @@ int main() {
         }
     }
 
-    return 0; // Standard practice to return an int from main
+    return 0;
 }
 
 void push(int *top, int stack[], int item) {
     if (*top == (SIZE - 1)) {
         printf("Stack is overflow\n");
-        return; // No need to return a value
+        return; 
     }
     stack[++(*top)] = item;
 }
@@ -53,7 +53,7 @@ void push(int *top, int stack[], int item) {
 int pop(int *top, int stack[]) {
     if (*top == -1) {
         printf("Stack is underflow\n");
-        return -1; // Return -1 to indicate failure
+        return -1; 
     }
     return stack[(*top)--];
 }
@@ -61,7 +61,7 @@ int pop(int *top, int stack[]) {
 void display(int *top, int stack[]) {
     if (*top == -1) {
         printf("Stack is empty\n");
-        return; // No need to return a value
+        return;
     }
     for (int i = *top; i >= 0; i--) {
         printf("%d\n", stack[i]);
